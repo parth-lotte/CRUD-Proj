@@ -1,3 +1,5 @@
-h1{
-    color: rgb(206, 81, 31);
+.form-layout
+{
+    border-radius: 10px;
+    width: 750px;
 }
