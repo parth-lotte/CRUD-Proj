@@ -3,6 +3,64 @@
 
 {% block content %}
 
-    <h3>Hola ! Welcome to the dashboard page! {{user}}</h3>
+    <h5>Hola ! Welcome to the dashboard page! {{user}}!</h5>
+
+    <hr>
+
+    <a  class=" btn btn-outline-primary btn-sm" href="{% url 'dashboard' %}">
+
+        Create a new record !
+    </a>
+
+    <hr>
+    <table class="table table-light table-hover table-bordered" >
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Full Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Address</th>
+            <th scope="col">City</th>
+            <th scope="col">Province</th>
+            <th scope="col">Country</th>
+            <th scope="col">DOJ</th>
+
+            <th scope="col">View</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% if records %}
+            {% for record in records %}
+          <tr>
+            <td>{{record.id}}</td>
+            <td>{{record.first_name}} {{record.last_name}}</td>
+            <td>{{record.email}}</td>
+            <td>{{record.phone}}</td>
+            <td>{{record.address}}</td>
+            <td>{{record.city}}</td>
+            <td>{{record.province}}</td>
+            <td>{{record.country}}</td>
+            <td>{{record.creation_date}}</td>
+
+          </tr>
+        {% endfor %}
+          {% endif%}
+
+        </tbody>
+      </table>
+
+    <!-- <button></button> -->
+
+        {% for record in records %}
+        
+            {{record.id}}
+            {{record.first_name}}
+            {{record.last_name}}
+            <!-- {{record.id}} -->
+        
+
+        {% endfor %}
+
 
 {% endblock%}
