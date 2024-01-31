@@ -139,7 +139,7 @@ def update_record(request, pk):
     
     
     
-    return render(request, 'webapp/update_record.html', context=context)
+    return render(request, 'webapp/update-record.html', context=context)
             
         
     
@@ -153,6 +153,6 @@ def read_record(request, pk):
     
     context={'record': all_records}
     
-    return render(request,'webap/view-record.html', context=context)
+    return render(request,'webapp/view-record.html', context=context)
     
     

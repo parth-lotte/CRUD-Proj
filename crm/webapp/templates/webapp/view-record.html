@@ -7,22 +7,45 @@
     <div class="card">
 
         <strong>
-            
-            {{record.first_name}}
-            {{record.last_name}} 
+                <!-- <br> -->
+                &nbsp; &nbsp; 
 
+              {{record.first_name}}
 
-
+              {{record.last_name}} 
+        
         </strong>
+
+        
          <div class="card-body">
 
-            <p><strong>ID:</strong> {{record.id}} </p>
-            <p><strong>Email:</strong> {{record.email}}</p>
-            <p><strong>Phone:</strong>:</strong> {{record.phone}}</p>
-            <p><strong>Address:</strong> {{record.address}}</p>
-            <p><strong>City:</strong> {{record.city}}</p>
+             <p><strong>ID: </strong> {{record.id}} </p>
+
+            <p><strong>Email: </strong> {{record.email}}</p>
+
+            <p><strong>Phone: </strong>:</strong> {{record.phone}}</p>
+
+            <p><strong>Address: </strong> {{record.address}}</p>
+
+            <p><strong>City: </strong> {{record.city}}</p>
+
 
          </div>   
     </div>
+    <br>
+    
+    <a href="{% url 'dashboard' %}" class = "btn btn-secondary"> Return To Dashboard</a>
+    
+    &nbsp;
+
+    <a href="{% url 'update-record' record.id %}" class = "btn btn-info"> Update record</a>
+
+    &nbsp;
+
+    <a href="{% url '' %}" class = "btn btn-danger"> Return</a>
+
+
+    <!--  we are adding the non breaking space  -->
+
 
 {% endblock %}

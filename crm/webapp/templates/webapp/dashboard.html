@@ -43,6 +43,9 @@
             <td>{{record.country}}</td>
             <td>{{record.creation_date}}</td>
 
+<!-- We will add the url here to open the particular record -->
+            <td> <a href="{% url 'record' record.id %}">Click here </a></td>  
+
           </tr>
         {% endfor %}
           {% endif%}
@@ -52,7 +55,7 @@
 
     <!-- <button></button> -->
 
-        {% for record in records %}
+        <!-- {% for record in records %}
         
             {{record.id}}
             {{record.first_name}}
@@ -60,7 +63,7 @@
             <!-- {{record.id}} -->
         
 
-        {% endfor %}
+        <!-- {% endfor %}  -->
 
 
 {% endblock%}

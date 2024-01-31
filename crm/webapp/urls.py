@@ -16,6 +16,6 @@ urlpatterns = [
     
     path('update-record/<int:pk>', views.update_record , name= 'update-record'),
     
-    # path()
+    path('record/<int:pk>', views.read_record, name='record'),
     
 ]
