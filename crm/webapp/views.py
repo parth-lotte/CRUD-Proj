@@ -11,6 +11,9 @@ from django.contrib.auth.decorators import login_required
 
 from .models import Record
 
+from django.contrib import messages  
+#  imported for notification messages
+
 def home(request):
     # return HttpResponse('Hello Parth Lotte !')
     
@@ -31,6 +34,8 @@ def register(request):
         if form.is_valid():
             
             form.save()
+            
+            messages.success(request, "Account Created Successfully !")
             
             return redirect('my-login') # redirect to the login page 
             
@@ -61,6 +66,8 @@ def my_login(request):
                 
                 auth.login(request, user)
                 
+                
+                
                 return redirect("dashboard")
                  
     context= {'form2':form}
@@ -72,6 +79,7 @@ def my_login(request):
 
 def user_logout(request):
     auth.logout(request)
+    messages.success(request, "Logged Out !")
     
     return redirect("my-login")
 
@@ -101,7 +109,7 @@ def create_record(request):
         if form.is_valid():
             
             form.save()
-            
+            messages.success(request, "Record Created !")
             return redirect("dashboard")
         
         
@@ -155,4 +163,22 @@ def read_record(request, pk):
     
     return render(request,'webapp/view-record.html', context=context)
     
+    
+    
+    # Delete a record 
+    
+    
+    
+@login_required(login_url='my-login')
+
+def delete_record(request, pk):
+    
+    record = Record.objects.get(id=pk)
+    record.delete()
+    
+    messages.success(request, "Record Deleted !")
+    
+     
+    
+    return redirect("dashboard")
     

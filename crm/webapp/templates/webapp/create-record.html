@@ -23,11 +23,39 @@
                 {% csrf_token %}
 
 
-                {{form|crispy}}  
+                <!-- {{form|crispy}}   -->
 
+                {{form.first_name | as_crispy_field}}
+                <br>
+                {{form.last_name | as_crispy_field}}
+                <br>
+                {{form.email | as_crispy_field}}
+                <br>
+                {{form.phone | as_crispy_field}}
+                <br>
+                {{form.address | as_crispy_field}}
+                <br>
+                {{form.city | as_crispy_field}}
+                <br>
+                {{form.province | as_crispy_field}}
+                <br>
+                {{form.country | as_crispy_field}}
                 <br>
 
-                <button type="submit" class="btn btn-primary w-100 btn-block p-2">Create Record</button>
+
+
+                <br>
+               
+                <button type="submit" class="btn btn-primary">Create Record &nbsp; <i class="fa fa-check"></i></button>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                <a href="{% url 'dashboard' %}" class=" btn btn-secondary">
+
+                    Return &nbsp; <i class="fa fa-arrow"></i>
+
+
+                </a>
             </form>
 
         </div>

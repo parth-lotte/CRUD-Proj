@@ -9,7 +9,8 @@
 
     <a  class=" btn btn-outline-primary btn-sm" href="{% url 'create-record' %}">
 
-        Create a new record !
+        Create a new record ! 
+       &nbsp; <i class="fa fa-clipboard"></i>
     </a>
 
     <hr>
@@ -44,7 +45,7 @@
             <td>{{record.creation_date}}</td>
 
 <!-- We will add the url here to open the particular record -->
-            <td> <a href="{% url 'record' record.id %}">Click here </a></td>  
+            &nbsp;<td> &nbsp; <a href="{% url 'record' record.id %}"><i class="fa fa-eye"></i> </a></td>  
 
           </tr>
         {% endfor %}

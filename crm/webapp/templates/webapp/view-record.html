@@ -6,43 +6,44 @@
 
     <div class="card">
 
-        <strong>
-                <!-- <br> -->
-                &nbsp; &nbsp; 
-
-              {{record.first_name}}
-
-              {{record.last_name}} 
         
-        </strong>
 
-        
          <div class="card-body">
+            <i class="fa fa-user"></i>
+            &nbsp;
+            <strong>
+                
+                
+                <b> {{record.last_name | upper}} {{record.first_name}} </b>
+                        
+           </strong>
+           <hr>
+            <p><b><strong>ID:</b></strong> {{record.id}} </p>
 
-             <p><strong>ID: </strong> {{record.id}} </p>
+            <p><b><strong>Email:</b> </strong> {{record.email}}</p>
 
-            <p><strong>Email: </strong> {{record.email}}</p>
+            <p><b><strong>Phone:</b> </strong>:</strong> {{record.phone}}</p>
 
-            <p><strong>Phone: </strong>:</strong> {{record.phone}}</p>
+            <p><b><strong>Address:</b> </strong> {{record.address}}</p>
 
-            <p><strong>Address: </strong> {{record.address}}</p>
-
-            <p><strong>City: </strong> {{record.city}}</p>
+            <p><b><strong>City:</b> </strong> {{record.city}}</p>         
+            <p><b><strong>Province:</b> </strong> {{record.province}}</p>
+            <p><b><strong>Country:</b> </strong> {{record.country}}</p>
 
 
          </div>   
     </div>
     <br>
     
-    <a href="{% url 'dashboard' %}" class = "btn btn-secondary"> Return To Dashboard</a>
+    <a href="{% url 'dashboard' %}" class = "btn btn-primary"> Return To Dashboard &nbsp; <i class="fa fa-backward"></i></a>
     
     &nbsp;
 
-    <a href="{% url 'update-record' record.id %}" class = "btn btn-info"> Update record</a>
+    <a href="{% url 'update-record' record.id %}" class = "btn btn-info"> Update record &nbsp; <i class="fa fa-wrench"></i></a>
 
     &nbsp;
 
-    <a href="{% url '' %}" class = "btn btn-danger"> Return</a>
+    <a href="{% url 'delete-record' record.id %}" class = "btn btn-danger"> Delete Record &nbsp; <i class="fa fa-trash"></i> </a>
 
 
     <!--  we are adding the non breaking space  -->

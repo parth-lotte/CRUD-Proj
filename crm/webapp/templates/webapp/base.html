@@ -7,7 +7,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>WebApp</title>
-
+        <!--  Adding the font awesome tool -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel= "stylesheet" type="text/css" href="https://bootswatch.com/5/lux/bootstrap.css">
         <!-- referring the static method over here  -->
         <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
@@ -25,6 +26,19 @@
             <br>
 
             <!--  Notification -->
+
+            {% for message in messages %}
+
+                {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+
+                <p id="msg-timer" class=" alert alert-success float- center text-center">
+
+                     <i class="fa fa-check-double"></i> &nbsp; {{message}}
+                </p>
+
+                {% endif %}
+
+            {% endfor %}
 
             <!--  We will make block content as it gonna be overloaded  -->
 

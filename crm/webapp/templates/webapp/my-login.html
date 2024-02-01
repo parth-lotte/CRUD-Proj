@@ -24,11 +24,15 @@
             {% csrf_token %}
 
 
-            {{form2|crispy}}  
+            <!-- {{form2|crispy}}   -->
+            {{form2.username | as_crispy_field}}
+            <br>
+            {{form2.password | as_crispy_field}}
+
 
             <br>
 
-            <button type="submit" class="btn btn-primary w-100 btn-block p-2"> Login</button>
+            <button type="submit" class="btn btn-primary w-100 btn-block p-2"> Login  &nbsp; <i class="fa fa-key"></i></button>
         </form>
 
         <br>
