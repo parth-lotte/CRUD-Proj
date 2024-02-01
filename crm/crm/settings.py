@@ -20,7 +20,9 @@ DEBUG = False
 # changed this to false ******RC*******
 
 # ALLOWED_HOSTS = [*]
-ALLOWED_HOSTS = ['3.27.191.155','3.27.191.155:8000']
+# ALLOWED_HOSTS = ['3.27.191.155','3.27.191.155:8000']
+ALLOWED_HOSTS = ['3.27.191.155', '3.27.191.155:8000']
+
 
 # replaceddddd hosts 
 
