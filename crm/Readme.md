@@ -98,8 +98,8 @@ I welcome contributions from the community! Fork the repository, make improvemen
 
 ![Login](https://github.com/parth-lotte/CRUD-Proj/blob/master/crm/Output/1page.png)
 
-![Creation](https://github.com/parth-lotte/CRUD-Proj/blob/master/crm/Output/1page.png)
+![Creation](https://github.com/parth-lotte/CRUD-Proj/blob/master/crm/Output/AccountCreate.png)
 
 
-![DashBoard](https://github.com/parth-lotte/CRUD-Proj/blob/master/crm/Output/1page.png)
+![DashBoard](https://github.com/parth-lotte/CRUD-Proj/blob/master/crm/Output/login.png)
 
